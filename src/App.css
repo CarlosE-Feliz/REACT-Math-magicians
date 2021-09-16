@@ -4,7 +4,7 @@
 }
 
 .main {
-  width: 50%;
+  width: 27%;
   height: 100vh;
 }
 
@@ -15,6 +15,10 @@
   text-align: center;
 }
 
+.calComp:hover {
+  background-color: #b3b1b1;
+}
+
 .grid {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -23,13 +27,6 @@
 
 .num0 {
   grid-column: 1 / 3;
-}
-
-.showData {
-  background-color: #858694;
-  border: #c5c5c5 2px solid;
-  height: 50px;
-  text-align: right;
 }
 
 .operations {
@@ -44,9 +41,26 @@
   text-align: center;
 }
 
+.opeComp:hover {
+  background-color: #e48232;
+}
+
 .operation {
   width: 250px;
   height: 350px;
   display: flex;
   flex-direction: column;
+}
+
+input[type="text"] {
+  background-color: #858694;
+  border: #c5c5c5 2px solid;
+  width: 98.9%;
+  height: 50px;
+  text-align: right;
+  border: 0;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 25px;
 }
