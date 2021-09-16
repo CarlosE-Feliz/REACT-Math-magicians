@@ -1,14 +1,16 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 import '../App.css';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
-function Calculator(calulation) {
-  const { next, total, operation } = calulation;
+function Calculator() {
+  const [calculation, setCalculation] = useState({ total: 0, next: null, operation: null });
+  const { next, total, operation } = calculation;
 
   const handleEvent = (e) => {
     e.preventDefault();
-    calulation((prev) => calculate(prev, e.target.name));
+    setCalculation((prev) => calculate(prev, e.target.name));
   };
 
   const showTotal = () => {
@@ -25,7 +27,7 @@ function Calculator(calulation) {
     <div id="main" className="main">
       <h3>Math Magicians</h3>
       <form name="form">
-        <input type="text" id="result" value={(showTotal(calulation)) + (operation || '') + (next || '')} disabled />
+        <input type="text" id="result" value={(showTotal()) + (operation || '') + (next || '')} disabled />
       </form>
       <div id="operations" className="operations">
         <div id="gridDiv" className="grid">
