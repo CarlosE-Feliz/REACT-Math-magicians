@@ -4,7 +4,7 @@ import '../App.css';
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
-function Calculator() {
+const Calculator = () => {
   const [calculation, setCalculation] = useState({ total: 0, next: null, operation: null });
   const { next, total, operation } = calculation;
 
@@ -54,6 +54,6 @@ function Calculator() {
       </div>
     </div>
   );
-}
+};
 
 export default Calculator;
