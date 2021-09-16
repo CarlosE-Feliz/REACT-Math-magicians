@@ -11,7 +11,10 @@
 - React
 - Webpack
 
-# Getting Started
+## Demo Version
+[Demo](https://xjokeer.github.io/Math-magicians/)
+#
+## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
