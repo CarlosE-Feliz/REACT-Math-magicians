@@ -1,38 +1,63 @@
+/* eslint-disable no-console */
 import '../App.css';
 import React from 'react';
-import ShowText from './showText';
+import calculate from '../logic/calculate';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      total: 0,
+      next: null,
+      operation: null,
+    };
+    this.handleEvent = this.handleEvent.bind(this);
+  }
+
+  handleEvent = (e) => {
+    e.preventDefault();
+    this.setState((prev) => calculate(prev, e.target.name));
   }
 
   render() {
+    const { total, next, operation } = this.state;
+    const showTotal = () => {
+      if (total === 0 && next === null) {
+        return 0;
+      }
+
+      if (total !== 0 && total !== null) {
+        return total;
+      }
+      return '';
+    };
     return (
       <div id="main" className="main">
-        <ShowText />
+        <h3>Math Magicians</h3>
+        <form name="form">
+          <input type="text" id="result" value={(showTotal()) + (operation || '') + (next || '')} disabled />
+        </form>
         <div id="operations" className="operations">
           <div id="gridDiv" className="grid">
-            <tr className="calComp">AC</tr>
-            <tr className="calComp">+/-</tr>
-            <tr className="calComp">%</tr>
-            <tr className="opeComp">%</tr>
-            <tr className="calComp">7</tr>
-            <tr className="calComp">8</tr>
-            <tr className="calComp">9</tr>
-            <tr className="opeComp">*</tr>
-            <tr className="calComp">4</tr>
-            <tr className="calComp">5</tr>
-            <tr className="calComp">6</tr>
-            <tr className="opeComp">-</tr>
-            <tr className="calComp">1</tr>
-            <tr className="calComp">2</tr>
-            <tr className="calComp">3</tr>
-            <tr className="opeComp">+</tr>
-            <tr className="calComp num0">0</tr>
-            <tr className="calComp">.</tr>
-            <tr className="opeComp">=</tr>
+            <button type="button" onClick={this.handleEvent} name="AC" className="calComp">AC</button>
+            <button type="button" onClick={this.handleEvent} name="+/-" className="calComp">+/-</button>
+            <button type="button" onClick={this.handleEvent} name="%" className="calComp">%</button>
+            <button type="button" onClick={this.handleEvent} name="÷" className="opeComp">÷</button>
+            <button type="button" onClick={this.handleEvent} name="7" className="calComp">7</button>
+            <button type="button" onClick={this.handleEvent} name="8" className="calComp">8</button>
+            <button type="button" onClick={this.handleEvent} name="9" className="calComp">9</button>
+            <button type="button" onClick={this.handleEvent} name="*" className="opeComp">*</button>
+            <button type="button" onClick={this.handleEvent} name="4" className="calComp">4</button>
+            <button type="button" onClick={this.handleEvent} name="5" className="calComp">5</button>
+            <button type="button" onClick={this.handleEvent} name="6" className="calComp">6</button>
+            <button type="button" onClick={this.handleEvent} name="-" className="opeComp">-</button>
+            <button type="button" onClick={this.handleEvent} name="1" className="calComp">1</button>
+            <button type="button" onClick={this.handleEvent} name="2" className="calComp">2</button>
+            <button type="button" onClick={this.handleEvent} name="3" className="calComp">3</button>
+            <button type="button" onClick={this.handleEvent} name="+" className="opeComp">+</button>
+            <button type="button" onClick={this.handleEvent} name="0" className="calComp num0">0</button>
+            <button type="button" onClick={this.handleEvent} name="." className="calComp">.</button>
+            <button type="button" onClick={this.handleEvent} name="=" className="opeComp">=</button>
           </div>
         </div>
       </div>
