@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import styles from './Home.module.css';
 
@@ -7,8 +7,12 @@ function Home() {
     <div className={styles.home}>
       <h4> Welcome to our page</h4>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, cumque rem. Repellat optio voluptatem ab ratione minima, distinctio autem excepturi maiores quis mollitia quam saepe temporibus voluptates incidunt. Totam, cupiditate.
-        A quas officiis reiciendis rem tempora animi, officia eaque voluptate, excepturi placeat accusamus, dolore praesentium illo quisquam ab consequatur qui dolores possimus? Dolor earum alias corrupti. Minus nam maxime nesciunt?
+        "Good Christians should beware of mathematicians and
+        of all those who are used to making prophecies, even when these
+        prophecies are fulfilled, because there is a danger that mathematicians
+        have made a pact with the devil to cloud the spirit and plunge men into
+        hell.».
+        San Agustin
       </p>
     </div>
   );

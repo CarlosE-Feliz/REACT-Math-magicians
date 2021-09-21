@@ -1,4 +1,3 @@
-/* eslint-disable no-sequences */
 /* eslint-disable no-unused-vars */
 import './App.css';
 import React, { Component } from 'react';
@@ -43,37 +42,47 @@ function App() {
     },
   ];
   return (
-    <Router>
-      <div style={styles[4]}>
-        <div style={styles[0]}>
-          <h1 style={styles[5]}> Math Magicians</h1>
-          <nav>
-            <ul style={styles[2]}>
-              <li style={styles[1]}>
-                <Link style={styles[3]} to="/">Home</Link>
-              </li>
-              <li style={styles[1]}>
-                <Link style={styles[3]} to="/calculator">Calculator</Link>
-              </li>
-              <li style={styles[1]}>
-                <Link style={styles[3]} to="/quotes">Quotes</Link>
-              </li>
-            </ul>
-          </nav>
+    <>
+      <Router>
+        <div style={styles[4]}>
+          <div style={styles[0]}>
+            <h1 style={styles[5]}> Math Magicians</h1>
+            <nav>
+              <ul style={styles[2]}>
+                <li style={styles[1]}>
+                  <Link style={styles[3]} to="/">Home</Link>
+                </li>
+                <li style={styles[1]}>
+                  <Link style={styles[3]} to="/calculator">Calculator</Link>
+                </li>
+                <li style={styles[1]}>
+                  <Link style={styles[3]} to="/quotes">Quotes</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <Switch>
+            <Route path="/calculator">
+              <Calculator />
+            </Route>
+            <Route path="/quotes">
+              <Quotes />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
         </div>
-        <Switch>
-          <Route path="/calculator">
-            <Calculator />
-          </Route>
-          <Route path="/quotes">
-            <Quotes />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+      </Router>
+      <footer>
+        <div>
+          <p>
+            Designed by
+            <a style={styles[3]} target="_blank" href="https://github.com/xJokeer" rel="noreferrer"> @xJokeer</a>
+          </p>
+        </div>
+      </footer>
+    </>
   );
 }
 
