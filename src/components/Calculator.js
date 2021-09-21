@@ -25,7 +25,6 @@ const Calculator = () => {
   };
   return (
     <div id="main" className="main">
-      <h3>Math Magicians</h3>
       <form name="form">
         <input type="text" id="result" value={(showTotal()) + (operation || '') + (next || '')} disabled />
       </form>

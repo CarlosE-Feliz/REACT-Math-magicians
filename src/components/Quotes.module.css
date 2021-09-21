@@ -1,0 +1,13 @@
+.main {
+  margin: 30px;
+  align-items: center;
+}
+
+.main p {
+  text-align: center;
+  margin: 250px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  box-shadow: 0 0 5px 2px rgb(245, 240, 240);
+  font-family: 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,19 @@
+.home {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.home p {
+  text-align: center;
+  margin: 120px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  box-shadow: 0 0 5px 2px rgb(245, 240, 240);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.home h4 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
