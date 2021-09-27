@@ -16,7 +16,7 @@ Open it with:
 
 [Heroku App](https://xjoker-math-magicians.herokuapp.com/)
 
-[Netlify](https://xjoker-math-magicians.herokuapp.com/)
+[Netlify](https://xjokeer-math.netlify.app/)
 #
 ## Getting Started
 
