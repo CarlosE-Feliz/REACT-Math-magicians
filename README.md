@@ -11,8 +11,12 @@
 - React
 - Webpack
 
-## Demo Version
-[Demo](https://xjokeer.github.io/Math-magicians/)
+## Live Version
+Open it with:
+
+[Heroku App](https://xjoker-math-magicians.herokuapp.com/)
+
+[Netlify](https://xjoker-math-magicians.herokuapp.com/)
 #
 ## Getting Started
 
